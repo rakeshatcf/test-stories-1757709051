@@ -16,7 +16,7 @@ export interface DisplayUserList {
 }
 
 /**
- * Minimal interface for list views showing basic DisplayUserList information
+ * Minimal interface for list views showing basic information
  */
 export interface DisplayUserListItem {
   /** Unique identifier for the display user list */
@@ -27,28 +27,37 @@ export interface DisplayUserListItem {
 }
 
 /**
- * Extended interface for detailed display views of DisplayUserList
+ * Interface for display views with formatted timestamps
  */
-export interface DisplayUserListDisplayItem extends DisplayUserList {
-  /** Formatted creation date for display */
-  formattedCreatedAt?: string;
+export interface DisplayUserListDisplay {
+  /** Unique identifier for the display user list */
+  id: string;
   
-  /** Formatted update date for display */
-  formattedUpdatedAt?: string;
+  /** Name of the display user list */
+  name: string;
+  
+  /** ISO string timestamp when the display user list was created */
+  createdAt: string;
+  
+  /** ISO string timestamp when the display user list was last updated */
+  updatedAt: string;
 }
 
 /**
  * Interface for creating a new DisplayUserList (excludes auto-generated fields)
  */
-export interface CreateDisplayUserListRequest {
+export interface CreateDisplayUserList {
   /** Name of the display user list */
   name: string;
 }
 
 /**
- * Interface for updating an existing DisplayUserList
+ * Interface for updating an existing DisplayUserList (all fields optional except id)
  */
-export interface UpdateDisplayUserListRequest {
+export interface UpdateDisplayUserList {
+  /** Unique identifier for the display user list */
+  id: string;
+  
   /** Name of the display user list */
   name?: string;
 }
