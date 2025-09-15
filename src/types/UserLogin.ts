@@ -2,16 +2,24 @@
  * UserLogin entity interface
  */
 export interface UserLogin {
-  /** Unique identifier for the user login */
+  /**
+   * Unique identifier for the user login
+   */
   id: string;
-  
-  /** Name associated with the user login */
+
+  /**
+   * Name associated with the user login
+   */
   name: string;
-  
-  /** ISO string timestamp when the user login was created */
+
+  /**
+   * Timestamp when the user login was created
+   */
   createdAt: string;
-  
-  /** ISO string timestamp when the user login was last updated */
+
+  /**
+   * Timestamp when the user login was last updated
+   */
   updatedAt: string;
 }
 
@@ -19,13 +27,19 @@ export interface UserLogin {
  * UserLogin interface for list view display
  */
 export interface UserLoginListItem {
-  /** Unique identifier for the user login */
+  /**
+   * Unique identifier for the user login
+   */
   id: string;
-  
-  /** Name associated with the user login */
+
+  /**
+   * Name associated with the user login
+   */
   name: string;
-  
-  /** ISO string timestamp when the user login was created */
+
+  /**
+   * Timestamp when the user login was created
+   */
   createdAt: string;
 }
 
@@ -33,31 +47,48 @@ export interface UserLoginListItem {
  * UserLogin interface for detailed display view
  */
 export interface UserLoginDisplayItem {
-  /** Unique identifier for the user login */
+  /**
+   * Unique identifier for the user login
+   */
   id: string;
-  
-  /** Name associated with the user login */
+
+  /**
+   * Name associated with the user login
+   */
   name: string;
-  
-  /** ISO string timestamp when the user login was created */
+
+  /**
+   * Timestamp when the user login was created
+   */
   createdAt: string;
-  
-  /** ISO string timestamp when the user login was last updated */
+
+  /**
+   * Timestamp when the user login was last updated
+   */
   updatedAt: string;
 }
 
 /**
- * UserLogin interface for create/update operations
+ * UserLogin interface for creation (without id and timestamps)
  */
-export interface UserLoginInput {
-  /** Name associated with the user login */
+export interface CreateUserLogin {
+  /**
+   * Name associated with the user login
+   */
   name: string;
 }
 
 /**
- * UserLogin interface for update operations
+ * UserLogin interface for updates (all fields optional except id)
  */
-export interface UserLoginUpdate {
-  /** Name associated with the user login */
+export interface UpdateUserLogin {
+  /**
+   * Unique identifier for the user login
+   */
+  id: string;
+
+  /**
+   * Name associated with the user login
+   */
   name?: string;
 }
