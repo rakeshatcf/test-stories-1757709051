@@ -5,7 +5,7 @@ export interface UserRegistration {
   /** Unique identifier for the user registration */
   id: string;
   
-  /** Full name of the registered user */
+  /** Name of the registered user */
   name: string;
   
   /** ISO string timestamp when the registration was created */
@@ -22,7 +22,7 @@ export interface UserRegistrationListItem {
   /** Unique identifier for the user registration */
   id: string;
   
-  /** Full name of the registered user */
+  /** Name of the registered user */
   name: string;
   
   /** ISO string timestamp when the registration was created */
@@ -36,13 +36,13 @@ export interface UserRegistrationDisplayItem {
   /** Unique identifier for the user registration */
   id: string;
   
-  /** Full name of the registered user */
+  /** Name of the registered user */
   name: string;
   
   /** Formatted creation date */
   createdAt: string;
   
-  /** Formatted last updated date */
+  /** Formatted last update date */
   updatedAt: string;
 }
 
@@ -50,7 +50,7 @@ export interface UserRegistrationDisplayItem {
  * UserRegistration creation payload - excludes auto-generated fields
  */
 export interface CreateUserRegistrationPayload {
-  /** Full name of the registered user */
+  /** Name of the registered user */
   name: string;
 }
 
@@ -61,6 +61,6 @@ export interface UpdateUserRegistrationPayload {
   /** Unique identifier for the user registration */
   id: string;
   
-  /** Full name of the registered user */
+  /** Name of the registered user */
   name?: string;
 }
